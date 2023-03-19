@@ -1,0 +1,15 @@
+@media screen and (max-width: 426px){
+   #cart_container {
+    overflow: scroll;
+   }
+    .card_pay{
+    flex-direction: column;
+   } 
+   .card_pay .Coupon_card {
+    width: 100%;
+    margin-top: 10px;
+}
+.coupon_acction form input {
+    margin-bottom: 5px;
+}
+}

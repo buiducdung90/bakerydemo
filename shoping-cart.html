@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bakery</title>
+    <link rel="shortcut icon" href="./img/img-bakery/bakery-onepage-logo-light.png" type="image/x-icon">
+    <!-- link Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- cds awesomeicons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- font style -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Script bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <!-- links css -->
+    <link rel="stylesheet" href="./css/Main.css">
+    <link rel="stylesheet" href="./css/Main-reponsive.css">
+    <link rel="stylesheet" href="./css/shoping-cart.css">
+    <link rel="stylesheet" href="./css/shopping-reponsive.css">
+</head>
+
+<body>
+    <!-- header page -->
+    <div class="header ">
+        <div class="header__top container">
+            <div class="header_navbar header_navbar-left " onmouseleave="closeList('header__contact')"
+                onclick="cardShow('header__contact')"><i class="fa-solid fa-bars"></i></div>
+            <nav class="logo">
+                <img src="./img/img-bakery/bakery-onepage-logo-light.png" alt="">
+            </nav>
+            <form action="" class="search_product" id="search_product">
+                <input type="text" placeholder="Tìm Kiếm">
+                <button><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+            <div class="header__contact" id="header__contact">
+                <nav class="phone">
+                    <a href="">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>+84 999 999 99</span>
+                    </a>
+                </nav>
+                <nav class="Listshop">
+                    <a href="./product.html">
+                        <i class="fa-solid fa-store"></i>
+                        <span>Shop System</span>
+                    </a>
+                </nav>
+                <nav class="user">
+                    <a href="./signup.html">
+                        <i class="fa-solid fa-user"></i>
+                        <span>Login</span>
+                    </a>
+                </nav>
+                <nav class="icon">
+                   <a href="./cart.html"><i class="fa-solid fa-cart-shopping add-card-icon " ></i></a>
+                    <span>2</span>
+                </nav>
+
+            </div>
+            <div class="header_navbar header_navbar-right" onmouseleave="closeList('header__bottom')"
+                onclick="cardShow('header__bottom')"><i class="fa-solid fa-bars"></i></div>
+            <div class="header_navbar header_navbar-middle" onmouseleave="closeList('search_product')"
+                onclick="cardShow('search_product')"><i class="fa-solid fa-magnifying-glass"></i></div>
+            <nav class="header_navbar header_navbar-end">
+               <a href="./cart.html"><i class="fa-solid fa-cart-shopping add-card-icon " ></i></a>
+                <span>2</span>
+            </nav>
+        </div>
+        <div class="header__bottom container" id="header__bottom">
+            <div class="nav_list">
+                <nav class="item"><a href="./index.html">HOME</a></nav>
+                <nav class="item showlist">
+                    <a href="./shoping-cart.html">Products </a>
+                    <i class="fa fa-angle-down" id="key_down" onclick="dropDown('card-dropDown')"
+                        aria-hidden="true"></i>
+                    <i class="fa-solid fa-angle-up" id="key_up" onclick="closeCard('card-dropDown')"></i>
+                    <ul class="list-item " id="card-dropDown">
+                        <li><a href="./shoping-cart.html"> Choco Creamy </a></li>
+                        <li><a href="./shoping-cart.html">Heavenly Velvet</a> </li>
+                        <li><a href="./shoping-cart.html"> Delectable </a></li>
+                        <li><a href="./shoping-cart.html"> Gateaux Mousse</a></li>
+                        <li><a href="./shoping-cart.html"> Heart Shaped Sweet</a></li>
+                    </ul>
+                </nav>
+                <nav class="item">
+                    <a href="checkout.html">Order online </a>
+                </nav>
+                <nav class="item"><a href="./product.html">Menu </a></nav>
+                <nav class="item"><a href="./blog-page-2.html">Blog</a></nav>
+                <nav class="item"><a href="contact-us.html">Contact</a></nav>
+            </div>
+            <div class="nav_icons">
+                <a href=""> <i class="fa-brands fa-facebook"></i></a>
+                <a href=""> <i class="fa-brands fa-telegram"></i></a>
+                <a href=""> <i class="fa-brands fa-twitter"></i></a>
+                <a href=""> <i class="fa-brands fa-linkedin"></i></a>
+                <a href=""> <i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+    <!-- main -->
+    <div class="main_shopingcart ">
+        <div class="header_shopingcart container">
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="/product.html"> Delicious Creamy</a></li>
+                <li>Gateaux Mousse</li>
+            </ul>
+
+        </div>
+    </div>
+    <!-- oder -->
+    <div class="Main_product_cart container">
+        <div class="Main_product_cart-left ">
+            <div class="product_cart_item">
+                <div class="img_main_product">
+                    <img src="./img/page-oder/banh-kem-ms04.jpg" alt="Gateaux Mousse">
+                </div>
+                <div class="style_products">
+                    <img src="./img/img-bakery/carousel1.png" alt="">
+                    <img src="./img/img-bakery/carousel2.png" alt="">
+                    <img src="./img/img-bakery/carousel3.png" alt="">
+                </div>
+            </div>
+            <div class="product_cart_item">
+                <h1>Gateaux Mousse</h1>
+                <div class="product_comments_block_extra">
+                    <div class="item ">
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <div class="item "><span>0</span> review</div>
+                    <div class="item "><a href=""> Add your review </a></div>
+                </div>
+                <div class="product-information">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, voluptates! Quaerat magni
+                        fugit sit autem mollitia, iusto, adipisci cumque nihil pariatur ipsam cupiditate? Eos dolor
+                        molestiae quas nostrum ab inventore.
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit voluptas aspernatur in deleniti,
+                        dolor quam tempore eaque voluptatem eos sint sunt vero? Recusandae ad dolorem voluptatum tempora
+                        dolor beatae aperiam!
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores sed officiis eius, veritatis
+                        at suscipit natus voluptatem nostrum reiciendis nisi excepturi quam dignissimos aspernatur minus
+                        hic unde error quisquam vitae!</p>
+                </div>
+                <div class="product-actions ">
+                    <div class="control-label">
+                        <span>Size : </span>
+                        <select>
+                            <option value="S">S</option>
+                            <option value="M">M</option>
+                            <option value="L">L</option>
+                            <option value="xL">XL</option>
+                        </select>
+                    </div>
+                    <div class="control-label">
+                        <span>Quantity :</span>
+                        <span><input type="number" min="0" value="0"></span>
+                    </div>
+                    <div class="control-label">
+                        <button>Buy Now</button>
+                    </div>
+                </div>
+                <div class="card_social">
+                    <div class="social_icon"><a href=""><i class="fa-brands fa-facebook"></i></a></div>
+                    <div class="social_icon"><a href=""><i class="fa-brands fa-twitter"></i></a></div>
+                    <div class="social_icon"><a href=""><i class="fa-brands fa-instagram"></i></a></div>
+                    <div class="social_icon"><a href=""><i class="fa-brands fa-telegram"></i></a></div>
+                </div>
+            </div>
+        </div>
+        <div class="category">
+            <h3>BEST SELLER</h3>
+            <div class="product_cart_category ">
+                <div class="card_product-category">
+                    <div class="card_product-category-img">
+                        <img src="./img/img-bakery/img-slide/01.jpeg" alt="">
+                    </div>
+                    <div class="comments_notes">
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <h4><a href=""> Motichoor</a></h4>
+                    <p>Donec nec justo eget felis facilisis fermentum.</p>
+                    <div class="card_price-category "><span> Sell :250.000 <sup>đ</sup></span>
+                        <p><del>300.000 <sup>đ</sup></del></p>
+                    </div>
+                    <button>view more</button>
+                </div>
+
+                <div class="card_product-category">
+                    <div class="card_product-category-img">
+                        <img src="./img/img-bakery/img-slide/02.jpeg" alt="">
+                    </div>
+                    <div class="comments_notes">
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <h4><a href="">PASTRY</a></h4>
+                    <p>Donec nec justo eget felis facilisis fermentum.</p>
+                    <div class="card_price-category "><span>Sell :180.000 <sup>đ</sup></span>
+                        <p><del>200.000 <sup>đ</sup></del></p>
+                    </div>
+                    <button><a href="./product.html"> view more </a></button>
+                </div>
+                <div class="card_product-category">
+                    <div class="card_product-category-img">
+                        <img src="./img/img-bakery/img-slide/03.jpeg" alt="">
+                    </div>
+                    <div class="comments_notes">
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <h4><a href="">Delish </a></h4>
+                    <p>Donec nec justo eget felis facilisis fermentum.</p>
+                    <div class="card_price-category "><span>Sell :380.000 <sup>đ</sup></span>
+                        <p><del>400.000 <sup>đ</sup></del></p>
+                    </div>
+                    <button>view more</button>
+                </div>
+                <div class="card_product-category">
+                    <div class="card_product-category-img">
+                        <img src="./img/img-bakery/img-slide/04.jpeg" alt="">
+                    </div>
+                    <div class="comments_notes">
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <h4><a href="">FOUGASSE</a></h4>
+                    <p>Donec nec justo eget felis facilisis fermentum.</p>
+                    <div class="card_price-category "><span> Sell :390.000 <sup>đ</sup></span>
+                        <p><del>420.000 <sup>đ</sup></del></p>
+                    </div>
+                    <button>view more</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- slide products -->
+    <div class="listcartmyproducts form_table" id="form_table">
+        <div class="table_actions">
+            <a href="">Buy more..</a>
+            <span onclick="closeTable('table')">Close</span>
+        </div>
+        <div class="listCart">
+            <div class="Thanhtoan">
+                <table class="table table-success">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">image</th>
+                            <th scope="col">Title </th>
+                            <th scope="col">Price</th>
+                            <th scope="col">quantity</th>
+                            <th scope="col">Choose</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <!-- <th scope="row">1</th> 
+                         <td><img src="./img/chef/01-1.jpg"  width= 50 alt=""></td> 
+                         <td><span class ="title_productname">productName</span></td>
+                          <td><span class = "products">productPrice</span></td>
+                           <td><input type="number" value="1" min="0"></td> 
+                         <td class ="cart_delete">xóa</td> -->
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="tongtien">Tổng tiền : <span>0</span>$</div>
+            </div>
+        </div>
+    </div>
+    <!-- footer -->
+    <footer>
+        <div class="footer">
+            <div class="footer_top  ">
+                <div class="footer_top-item ">
+                    <div class="footer_img"><img src="./img/img-bakery/bakery-onepage-logo-light.png" alt=""></div>
+                    <div class="footer_icons">
+                        <a href=""><i class="fa-brands fa-facebook"></i></a>
+                        <a href=""><i class="fa-brands fa-instagram"></i></a>
+                        <a href=""><i class="fa-brands fa-pinterest"></i></a>
+                        <a href=""><i class="fa-brands fa-youtube"></i></a>
+                        <a href=""><i class="fa-brands fa-twitter"></i></a>
+                        <a href=""><i class="fa-solid fa-question"></i></a>
+                    </div>
+                </div>
+                <div class="footer_top-item">
+                    <h4>INFORMATION</h4>
+                    <ul>
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="./product.html">Search</a></li>
+                        <li><a href="./blog.html">Blog</a></li>
+                        <li><a href="./about-us.html">About us</a></li>
+                        <li><a href="./contact-us.html">contact us</a></li>
+                        <li><a href="./contact-us.html">Locations</a></li>
+                        <li><a href="./contact-us.html">Our Story</a></li>
+                    </ul>
+                </div>
+                <div class="footer_top-item">
+                    <h4>PRODUCTS</h4>
+                    <ul>
+                        <li><a href="./shoping-cart.html">Gateaux Mousse</a></li>
+                        <li><a href="./shoping-cart.html">Truffle Delight Cake</a></li>
+                        <li><a href="./shoping-cart.html">Cookies & Minicake</a></li>
+                        <li><a href="./shoping-cart.html">Cake fruit</a></li>
+                        <li><a href="./shoping-cart.html">Cheese Roll</a></li>
+                        <li><a href="./shoping-cart.html">Potato Ball</a></li>
+                        <li><a href="./shoping-cart.html">Spicy Pepper Potato</a></li>
+                    </ul>
+                </div>
+                <div class="footer_top-item">
+                    <h4>MY ACCOUNT</h4>
+                    <ul>
+                        <li><a href="./signup.html">My Account</a></li>
+                        <li><a href="./contact-us.html">My Address</a></li>
+                        <li><a href="./cart.html">My Cart</a></li>
+                        <li><a href="./signup.html">Email us</a></li>
+                        <li><a href="./signup.html">Contact us</a></li>
+                        <li><a href="./signup.html">Order Tracking</a></li>
+                        <li><a href="./signup.html">Refunds</a></li>
+                    </ul>
+                </div>
+                <div class="footer_top-item">
+                    <h4>bakery IN YOUR INBOX</h4>
+                    <p>For special offers, new goodies, and the latest news join our mailing list.</p>
+                    <form action="" class="search_product" id="search_product">
+                        <input type="text" placeholder="Search ours product">
+                        <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer_bottom container">
+                <p>© 2023 Bakery. All Rights Reserved. Powered by eProject B179.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="./js/cart.js"></script>
+    <script src="./js/style.js"></script>
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <!-- link style script -->
+</body>
+
+</html>

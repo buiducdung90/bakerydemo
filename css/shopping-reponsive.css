@@ -1,0 +1,39 @@
+@media screen and (max-width:1024px){
+    .Main_product_cart-left,.product_cart_category{
+        flex-direction: column;
+    }
+    .product_cart_item ,.card_product-category{
+        width: 100%;
+    }
+}
+@media screen and (max-width:758px){
+    .main_shopingcart{
+        background-image: url(/img/page-oder/01.jpg);
+        background-repeat: no-repeat;
+        height: 5vh;
+    } 
+    .header_shopingcart ul {
+        display: flex;
+        align-items: start;
+        font-size: 1rem;
+        font-weight:normal;
+    }
+    .header_shopingcart ul li  {
+        display: none;
+    }
+    .header_shopingcart ul li:last-child{
+        display: inline-block;
+    }
+    .Main_product_cart-left{
+        flex-direction: column;
+    }
+    .product_cart_item{
+        width: 100%;
+    }
+    .product_comments_block_extra {
+        flex-wrap: wrap;
+    }
+    .product_cart_category {
+        flex-wrap: wrap;
+    }
+}
